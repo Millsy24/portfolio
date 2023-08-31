@@ -20,7 +20,7 @@ export default function ContactMe({}: Props) {
         <h3 className='absolute top-24 uppercase tracking-[20px] text-white text-2xl'>Contact</h3>
 
         <div className='flex flex-col space-y-10'>
-          <h4 className = "text-white text-4xl font-semibold text-center">I have got what you need. <span className='underline decoration-[#2272FF] animate-pulse'>Let&apos;s Talk</span></h4>
+          <h4 className = "text-white text-4xl font-semibold text-center">I have got what you need. <span className='underline decoration-[#2272FF] animate-pulse'>Lets Chat</span></h4>
 
             <div className='space-y-10'>
                 <div className='flex items-center space-x-5 justify-center'>
