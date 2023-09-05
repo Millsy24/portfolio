@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Project } from "../typings";
 import { urlFor } from "../sanity";
+import Link from "next/link";
 
 
 type Props = {
@@ -42,10 +43,15 @@ function Projects({ projects}: Props) {
 
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center text-white">
-                <span className="decoration-[#2272FF]/50 underline">
-                  Case Study {i + 1} of {projects.length}:
+              Build {i + 1} of {projects.length}: {" "}
+              <Link key={project._id} href={project.linkToBuild}>
+                <span className="decoration-[#2272FF] underline cursor-pointer animate-pulse">
+                {project.title}
                 </span>{" "}
-                {project.title} <span></span>
+                </Link>
+                
+
+                
               </h4>
             <div className="flex items-center space-x-2 justify-center">
               {project.technologies.map(technology => (
@@ -57,9 +63,8 @@ function Projects({ projects}: Props) {
               ))}
               </div>
 
-              <p className="text-lg text-center md:text-left text-white">
-                {project.summary}
-              </p>
+              <p className="text-lg text-center md:text-left text-white">{project.summary}</p>
+              
             </div>
           </motion.div>
         ))}
